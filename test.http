@@ -1,0 +1,32 @@
+###
+GET http://localhost:4004/odata/v4/catalog/Books 
+
+### browse by Book iD
+GET http://localhost:4004/odata/v4/catalog/Books('2')
+
+### insert a new record
+POST http://localhost:4004/odata/v4/catalog/Books 
+Content-Type: application/json
+
+{
+    "title": "course12", 
+    "author": "Prakash ",
+     "price": 200 ,
+     "stock" : 1220
+     }
+
+### update the existing record
+
+PATCH http://localhost:4004/odata/v4/catalog/Books('3') 
+Content-Type: application/json
+
+{
+    "price": 2150,
+    "stock": 10
+}
+
+### delete a record
+
+DELETE http://localhost:4004/odata/v4/catalog/Books('2')
+
+

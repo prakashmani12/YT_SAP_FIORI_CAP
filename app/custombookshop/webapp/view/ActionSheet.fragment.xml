@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+<ActionSheet id="_IDGenActionSheet" title="Actions">
+<buttons>
+<Button id="_IDGenButton4" icon="sap-icon://show" text="view" press="onViewPress"/>
+<Button id="_IDGenButton5" icon="sap-icon://delete" text="delete" press=".onDeletePress"/>
+<Button id="_IDGenButton6" icon="sap-icon://edit" text="Edit" press=".onEditPress"/>
+
+</buttons>
+</ActionSheet>
+</core:FragmentDefinition>
