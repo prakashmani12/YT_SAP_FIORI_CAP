@@ -23,7 +23,7 @@ sap.ui.define([
                 var genre = oView.byId("genreInput").getValue();
 
                 var oModel = oView.getModel();
-                //alert(title+ " " + author);
+                //alert(title+ " " + author); test
                 var oContext = oModel.bindList("/Books").create(
                     {
                         "title": title,
