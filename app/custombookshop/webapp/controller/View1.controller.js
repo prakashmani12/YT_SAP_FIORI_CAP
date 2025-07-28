@@ -185,12 +185,23 @@ oContext.setProperty("genre",genre);
 update_model.submitBatch("auto").then(function(){
     resetBusy();
     MessageBox.success("Product updated successfully");
+    that.onRefresh();
 }).catch(function(err){
     resetBusy();
     MessageBox.error("An error occured while updating the item "+err);
 });
 
-} // Update action
+}, // Update action
+
+onRefresh: function(){
+    var oBinding = this.byId("booksTable").getBinding("items");
+    if(oBinding.hasPendingChanges()){
+        MessageBox.error("Save your data before refreshing");
+        return;
+    }
+    oBinding.refresh();
+    MessageToast.show("Data refreshed");
+}
 
         });
     });
